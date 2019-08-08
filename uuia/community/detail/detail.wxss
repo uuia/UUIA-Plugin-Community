@@ -1,0 +1,115 @@
+/* pages/community/detail/detail.wxss */
+.white-background{
+  background-color: #fff;
+}
+.card-top{
+  display: flex;
+}
+
+.like-list{
+  display: flex;
+  flex-direction: row;
+  background: #FFF;
+  width: 750rpx;
+  flex-wrap: wrap;
+}
+
+.card-top-pic {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx 20rpx;
+  border-radius: 5%;
+}
+
+.card-top-right{
+  margin-top: 25rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-top-name{
+  font-size: 30rpx;
+  color: #414141;
+  font-weight: bold;
+}
+
+.card-top-time {
+  margin-top: 8rpx;
+  font-size: 25rpx;
+  color: #9c9c9c;
+}
+
+.card-top-right-top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-top-right-top-image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 10rpx;
+}
+
+.card-content {
+  margin: 0 20rpx 20rpx 20rpx;
+  padding-bottom: 20rpx;
+  color: #515151;
+  font-size: 30rpx;
+}
+
+.card-bottom {
+  margin: 0 20rpx;
+  height: 80rpx;
+  border-top: 1rpx solid #f5f6f9;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-bottom-buttons{
+  width: 100%;
+  margin: 20rpx 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-bottom-pic{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.card-bottom-like{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-bottom-comments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-bottom-share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-bottom-number{
+  margin-left: 10rpx;
+  color: #515151;
+  font-size: 28rpx;
+}
+
+.comment-list{
+  background-color: #fff;
+}
+
+.comment-top-pic{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 25rpx 20rpx;
+  border-radius: 50%
+}

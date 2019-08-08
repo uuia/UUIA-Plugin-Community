@@ -1,0 +1,55 @@
+<!--pages/community/deliver/deliver.wxml-->
+<!--顶部标题栏-->
+<top-bar hasBack="{{true}}"></top-bar>
+
+<van-toast id="van-toast" duration="2000" />
+
+<card-title text="发布新鲜事" sub-text="Community Msg."></card-title>
+<view class="bg-white margin shadow-md radius-lg animation-slide-bottom" wx:if="{{ifValid}}">
+  <view class='input-field margin-top'>
+    <van-cell-group>
+      <van-field value="{{ value }}" placeholder="今天遇到了什么新鲜事儿? 有什么问题想问问大家?" border="{{ false }}" bind:change="onChange" autosize type="textarea" />
+    </van-cell-group>
+  </view>
+
+  <view class='options'>
+    <view class='add' bindtap="chooseImage" wx:if="{{images.length < 3}}">
+      <view class='image-left'>
+        <text class='icon-pic'></text>
+      </view>
+      <text class='text-left'>添加图片（{{images.length}}/3）</text>
+    </view>
+    <view class='add' bindtap="chooseImage" wx:if="{{images.length == 3}}">
+      <image src='../../../images/community/pic.png' class='image-left'></image>
+      <text class='text-left'>已达上限（3/3）</text>
+    </view>
+
+    <view class='send' bindtap='send'>
+      <text class='text-right'>（{{value.length}}/240）发送</text>
+      <view class='image-right'>
+        <text class='icon-forward'></text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 图片缩略图  -->
+  <view class="question-images">
+    <block wx:for="{{images}}" wx:key="*this">
+      <view class="q-image-wrap">
+        <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+        <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view wx:else class='perimission'>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class='perimission-button'>
+    授权登录
+  </button>
+</view>
+<view class='bottom-info'>
+  <card-title text="提示" sub-text="Note"></card-title>
+  <view class="last-info">
+    <text>新鲜事板块目前为Beta测试版，更多功能将持续推出。</text>
+  </view>
+</view>

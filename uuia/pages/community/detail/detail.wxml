@@ -1,0 +1,49 @@
+<!--pages/community/detail/detail.wxml-->
+<top-bar hasBack="{{true}}"></top-bar>
+
+<van-toast id="van-toast" />
+<view class="padding-bottom">
+  <message-card user_number="{{user_number}}" user_img="{{user_img}}" user_name="{{user_name}}" user_type="{{user_type}}" time2="{{time2}}" content="{{content}}" image_url1="{{image_url1}}" image_url2="{{image_url2}}"
+    image_url3="{{image_url3}}" message_type="{{message_type}}" link_url="{{link_url}}" description="{{description}}" like_number="{{like_number}}" comment_number="{{comment_number}}" description="{{description}}" like_status="{{like_status}}"
+    message_id="{{message_id}}"></message-card>
+
+  <van-tabs active="{{ active }}" swipeable color='#505050'>
+    <van-tab title="评论">
+      <view class='comment-list'>
+        <view wx:for="{{comments}}" wx:key="key">
+          <navigator url='../someone/someone?user_number={{item.user_number}}&remove=0'>
+            <view class='card-top'>
+              <image wx:if="{{item.user_img==null}}" src='../../../images/community/secret.png' class='card-top-pic'></image>
+              <image wx:else src='{{item.user_img}}' class='card-top-pic'></image>
+              <view class='card-top-right'>
+                <text class='card-top-name'>{{item.user_name}}</text>
+                <text class='card-top-time'>{{item.time2}}</text>
+              </view>
+            </view>
+          </navigator>
+
+          <view class='card-content'>
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+      </view>
+      <van-cell-group>
+        <van-field value="{{ value }}" placeholder="评论新鲜事..." border="{{ false }}" bind:change="onChange" use-button-slot>
+          <van-button slot="button" size="small" type="primary" bindtap='send'>发送</van-button>
+        </van-field>
+      </van-cell-group>
+      <!-- </view> -->
+    </van-tab>
+
+    <van-tab title="喜欢">
+      <view class='like-list'>
+        <view class='card-top' wx:for="{{likes}}" wx:key="key">
+          <navigator url='../someone/someone?user_number={{item.user_number}}&remove=0'>
+            <image wx:if="{{item.user_img==null}}" src='../../../images/community/secret.png' class='card-top-pic'></image>
+            <image wx:else src='{{item.user_img}}' class='card-top-pic'></image>
+          </navigator>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

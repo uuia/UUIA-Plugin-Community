@@ -1,0 +1,74 @@
+<!--components/message-card/message-card.wxml-->
+<view class="bg-white margin shadow-md radius-lg" wx:if="{{show}}">
+  <navigator url='/pages/community/someone/someone?user_number={{user_number}}&remove=0' class='radius-lg'>
+    <view class='card-top'>
+      <image wx:if="{{user_img==null}}" src='../../images/me/boy.png' class='card-top-pic radius-lg'></image>
+      <image wx:else src='{{user_img}}' class='card-top-pic radius-lg'></image>
+      <view class='card-top-right'>
+        <view class='card-top-right-top'>
+          <text class='card-top-name'>{{user_name}}</text>
+          <image wx:if="{{user_type==0}}" src='../../images/community/validation.png' class='card-top-right-top-image'></image>
+          <image wx:else src='../../images/community/validation_org.png' class='card-top-right-top-image'></image>
+        </view>
+        <text class='card-top-time'>{{time2}}</text>
+      </view>
+    </view>
+  </navigator>
+
+  <view class='card-content' bindlongpress="longTap" data-text="{{content}}">
+    <text>{{content}}</text>
+  </view>
+
+  <!-- 图片缩略图  -->
+  <view class="question-images" wx:if="{{image_url1.length>0}}">
+    <view class="q-image-wrap">
+      <image class="q-image radius-lg shadow-md" src="{{image_url1}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview" data-current="{{image_url1}}" data-pic1="{{image_url1}}" data-pic2="{{image_url2}}" data-pic3="{{image_url3}}"></image>
+    </view>
+    <view class="q-image-wrap" wx:if="{{image_url2.length>0}}">
+      <image class="q-image radius-lg shadow-md" src="{{image_url2}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview" data-current="{{image_url2}}" data-pic1="{{image_url1}}" data-pic2="{{image_url2}}" data-pic3="{{image_url3}}"></image>
+    </view>
+    <view class="q-image-wrap" wx:if="{{image_url3.length>0}}">
+      <image class="q-image radius-lg shadow-md" src="{{image_url3}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview" data-current="{{image_url3}}" data-pic1="{{image_url1}}" data-pic2="{{image_url2}}" data-pic3="{{image_url3}}"></image>
+    </view>
+  </view>
+
+  <view class="video-box" wx:if="{{message_type=='video'}}">
+    <video class="video" src="{{link_url}}" objectFit='cover'></video>
+  </view>
+
+  <view class='link-box' wx:if="{{message_type=='link'}}" bindtap="linkTo" data-url="{{link_url}}">
+    <view class='link-left'>
+      <view class="icon-link"></view>
+    </view>
+    <view class='link-right'>
+      <text>{{description}}</text>
+    </view>
+  </view>
+
+  <view class='card-bottom'>
+    <view class='card-bottom-buttons'>
+      <view class='card-bottom-button' wx:if="{{like_status!=1}}" bindtap='like' data-message_id="{{message_id}}" data-index="{{index}}">
+        <text class='icon-appreciate'></text>
+        <text class='card-bottom-number'> {{like_number}}</text>
+      </view>
+      <view class='card-bottom-button' wx:else bindtap='dislike' data-message_id="{{message_id}}" data-index="{{index}}">
+        <text class='icon-appreciatefill'></text>
+        <text class='card-bottom-number'> {{like_number}}</text>
+      </view>
+
+      <navigator class='card-bottom-button' url='/pages/community/detail/detail?message_id={{message_id}}&user_type={{user_type}}&like_status={{like_status}}&comment_number={{comment_number}}&like_number={{like_number}}&user_name={{user_name}}&time={{time}}&time2={{time2}}&content={{content}}&user_number={{user_number}}&image_url1={{image_url1}}&image_url2={{image_url2}}&image_url3={{image_url3}}&user_img={{user_img}}&image_num={{image_num}}&message_type={{message_type}}&description={{description}}&link_url={{link_url}}'>
+        <text class='icon-comment'></text>
+        <text class='card-bottom-number'> {{comment_number}}</text>
+      </navigator>
+      <button class='card-bottom-button' open-type="share" data-name="{{user_name}}" data-content="{{content}}" data-imgurl="{{image_url1}}">
+        <text class='icon-share'></text>
+      </button>
+      <button class='card-bottom-button' bindtap='remove' data-message_id="{{message_id}}" wx:if="{{remove==1}}">
+        <text class='icon-delete'></text>
+      </button>
+    </view>
+  </view>
+</view>
+
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />

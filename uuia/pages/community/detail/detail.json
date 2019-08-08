@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "新鲜事-详情",
+  "usingComponents": {
+    "van-tab": "../../../dist_vant/tab/index",
+    "van-tabs": "../../../dist_vant/tabs/index",
+    "van-field": "../../../dist_vant/field/index",
+    "van-toast": "../../../dist_vant/toast/index"
+  }
+}

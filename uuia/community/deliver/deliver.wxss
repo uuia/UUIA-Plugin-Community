@@ -1,0 +1,79 @@
+/* pages/community/deliver/deliver.wxss */
+.card{
+  margin: 20rpx;
+  width: 710rpx;
+  height: 520rpx;
+  box-shadow: 4rpx 4rpx 10rpx #ddd;
+  border-radius: 0.2rem;
+  background: #FFF;
+}
+
+.input-field{
+  height: 420rpx;
+  width: 100%;
+}
+
+.options{
+  margin: 0 30rpx;
+  width: 650rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1rpx solid #F5F6F9;
+}
+
+.image-left{
+  font-size: 50rpx;
+  color: #515151;
+}
+
+.text-left{
+  margin-left: 10rpx;
+  color: #515151;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.image-right{
+  margin-left: 10rpx;
+  font-size: 50rpx;
+  color: #0081ff;
+}
+
+.text-right{
+  color: #0081ff;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.send{
+  position:absolute;
+  right: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perimission{
+  margin-top: 20rpx;
+}
+
+.perimission-button{
+  width: 60%;
+  margin-top: 30rpx;
+  background-color: #0081ff;
+  color: #FFF;
+}
+
+.bottom-info{
+  position: absolute;
+  bottom: 50rpx;
+  width: 100%;
+}

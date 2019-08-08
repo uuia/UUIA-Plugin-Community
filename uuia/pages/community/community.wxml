@@ -1,0 +1,20 @@
+<!--pages/community/community.wxml-->
+<top-bar hasBack="{{false}}"></top-bar>
+<view class="bg-white margin shadow-md radius-lg animation-slide-bottom padding" wx:if="{{!isLoggedIn}}">
+  <navigator url="/pages/login_eone/login_eone">
+    <empty-state title="请绑定账户后继续" description="点击此处绑定" icon="link">
+    </empty-state>
+  </navigator>
+</view>
+<view wx:else>
+  <view wx:for="{{messages}}" wx:key="index" class="animation-scale-up" style='animation-delay: 0.2s'>
+    <message-card user_number="{{item.user_number}}" user_img="{{item.user_img}}" user_name="{{item.user_name}}" user_type="{{item.user_type}}" time="{{item.time}}" time2="{{item.time2}}" content="{{item.content}}" image_url1="{{item.image_url1}}" image_url2="{{item.image_url2}}"
+      image_url3="{{item.image_url3}}" message_type="{{item.message_type}}" link_url="{{item.link_url}}" description="{{item.description}}" like_number="{{item.like_number}}" comment_number="{{item.comment_number}}" description="{{item.description}}" like_status="{{item.like_status}}"
+      message_id="{{item.message_id}}" index="{{index}}" userid="{{userid}}"></message-card>
+  </view>
+</view>
+<view class='deliver-button bg-blue shadow-md animation-scale-up' bindtap='deliver'>
+  <view class='deliver-text text-sl'>
+    <text class='icon-add'></text>
+  </view>
+</view>

@@ -1,0 +1,212 @@
+/* pages/community/someone/someone.wxss */
+
+.top {
+  height: 260rpx;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  height: 200rpx;
+  width: 200rpx;
+  margin-left: 50rpx;
+}
+
+.left-photo {
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 50%;
+}
+
+.right {
+  margin-left: 60rpx;
+  height: 200rpx;
+  width: 350rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-name {
+  margin-top: 40rpx;
+  font-size: 40rpx;
+  color: #000000;
+  font-weight: bold;
+}
+
+.right-info {
+  margin-top: 40rpx;
+  font-size: 40rpx;
+  color: #505050;
+}
+
+/*卡片类*/
+
+.card-list {
+  margin: 20rpx;
+}
+
+.card {
+  width: 710rpx;
+  box-shadow: 4rpx 4rpx 10rpx #ddd;
+  border-radius: 0.2rem;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.card-top {
+  display: flex;
+}
+
+.card-top-pic {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx 20rpx;
+  border-radius: 5%;
+}
+
+.card-top-right {
+  margin-top: 25rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-top-remove-pic {
+  position: absolute;
+  right: 50rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.card-top-name {
+  font-size: 30rpx;
+  color: #414141;
+  font-weight: bold;
+}
+
+.card-top-right-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-top-right-top-image {
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 10rpx;
+}
+
+.card-top-time {
+  margin-top: 8rpx;
+  font-size: 25rpx;
+  color: #9c9c9c;
+}
+
+.card-content {
+  margin: 0 20rpx 20rpx 20rpx;
+  color: #515151;
+  font-size: 30rpx;
+}
+
+.card-bottom {
+  margin: 0 20rpx;
+  height: 80rpx;
+  border-top: 1rpx solid #f5f6f9;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-bottom-buttons {
+  width: 100%;
+  margin: 20rpx 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-bottom-pic {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.card-bottom-like {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-bottom-comments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-bottom-share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-bottom-number {
+  margin-left: 10rpx;
+  color: #515151;
+  font-size: 28rpx;
+}
+
+.deliver-button {
+  position: fixed;
+  bottom: 50rpx;
+  right: 20rpx;
+  width: 105rpx;
+  height: 105rpx;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0rpx 0rpx 20rpx #78bbe6;
+}
+
+.deliver-text {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: #78bbe6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.deliver-button-pic {
+  width: 96rpx;
+  height: 96rpx;
+}
+
+button {
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  height: 50rpx;
+  margin: 0;
+  padding: 0;
+  padding-top: 5rpx;
+  margin-bottom: 17rpx;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: #000;
+  background-color: #f8f8f8;
+}
+
+
+button::after {
+  border: none;
+}
+
+button {
+  background-color: #fff;
+}
+
+button {
+  border-radius: 0;
+}

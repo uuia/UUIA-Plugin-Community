@@ -1,0 +1,28 @@
+/*发送按钮*/
+.deliver-button {
+  position: fixed;
+  bottom: 50rpx;
+  right: 20rpx;
+  width: 105rpx;
+  height: 105rpx;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.deliver-text {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.deliver-button-pic {
+  width: 96rpx;
+  height: 96rpx;
+}

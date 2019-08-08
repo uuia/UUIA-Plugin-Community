@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新鲜事-发布历史",
+  "usingComponents": {
+    "van-dialog": "../../../dist_vant/dialog/index",
+    "van-toast": "../../../dist_vant/toast/index"
+  }
+}

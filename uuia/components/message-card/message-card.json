@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-dialog": "../../dist_vant/dialog/index",
+    "van-toast": "../../dist_vant/toast/index"
+  }
+}

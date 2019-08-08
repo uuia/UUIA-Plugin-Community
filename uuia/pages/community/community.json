@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "demo-block": "../../dist_vant/demo-block/index"
+  }
+}
